@@ -15,7 +15,7 @@ import tvstore.ModificarTelevisores;
 
 public class Menu extends JFrame {
 
-	private JPanel contentPane;
+	private JPanel cpMenu;
 
 	/**
 	 * Launch the application.
@@ -41,17 +41,17 @@ public class Menu extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 482, 348);
 		
-		JMenuBar menuBar = new JMenuBar();
-		setJMenuBar(menuBar);
+		JMenuBar mnbTienda = new JMenuBar();
+		setJMenuBar(mnbTienda);
 		
 		JMenu mArchivo = new JMenu("Archivo");
-		menuBar.add(mArchivo);
+		mnbTienda.add(mArchivo);
 		
 		JMenuItem sbmSal = new JMenuItem("Salir");
 		mArchivo.add(sbmSal);
 		
 		JMenu mMantenimiento = new JMenu("Mantenimiento");
-		menuBar.add(mMantenimiento);
+		mnbTienda.add(mMantenimiento);
 		
 		JMenuItem sbmConsTele = new JMenuItem("Consultar Televisores");
 		sbmConsTele.addActionListener(e -> {
@@ -73,32 +73,32 @@ public class Menu extends JFrame {
 		mMantenimiento.add(sbmListTele);
 		
 		JMenu mVentas = new JMenu("Ventas");
-		menuBar.add(mVentas);
+		mnbTienda.add(mVentas);
 		
 		JMenuItem sbmVend = new JMenuItem("Vender");
 		mVentas.add(sbmVend);
 		
 		JMenu mConfiguracion = new JMenu("Configuración");
-		menuBar.add(mConfiguracion);
+		mnbTienda.add(mConfiguracion);
 		
 		JMenuItem sbmConfiObse = new JMenuItem("Configurar obsequios");
 		mConfiguracion.add(sbmConfiObse);
 		
 		JMenu mAyuda = new JMenu("Ayuda");
 		
-		menuBar.add(mAyuda);
+		mnbTienda.add(mAyuda);
 		
-		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Acerca de Tienda");
-		mntmNewMenuItem_3.addActionListener(e->{
+		JMenuItem sbmAcerTiend = new JMenuItem("Acerca de Tienda");
+		sbmAcerTiend.addActionListener(e->{
 			AcercadeTienda dialog = new AcercadeTienda(); // Llama al JDialog
 		    dialog.setLocationRelativeTo(null); // Centra la ventana
 		    dialog.setVisible(true);
 		});
-		mAyuda.add(mntmNewMenuItem_3);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		mAyuda.add(sbmAcerTiend);
+		cpMenu = new JPanel();
+		cpMenu.setBorder(new EmptyBorder(5, 5, 5, 5));
 
-		setContentPane(contentPane);
+		setContentPane(cpMenu);
 	}
 
 }

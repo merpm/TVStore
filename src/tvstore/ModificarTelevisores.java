@@ -21,7 +21,7 @@ import javax.swing.DefaultComboBoxModel;
 
 public class ModificarTelevisores extends JDialog {
 
-	private final JPanel contentPanel = new JPanel();
+	private final JPanel cpModificarTelevisores = new JPanel();
 	private JTextField txtPrecio;
 	private JTextField txtAncho;
 	private JTextField txtAlto;
@@ -47,61 +47,61 @@ public class ModificarTelevisores extends JDialog {
 		setTitle("Modificar Televisores");
 		setBounds(100, 100, 471, 304);
 		getContentPane().setLayout(null);
-		contentPanel.setBounds(0, 0, 447, 267);
-		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		getContentPane().add(contentPanel);
-		contentPanel.setLayout(null);
+		cpModificarTelevisores.setBounds(0, 0, 447, 267);
+		cpModificarTelevisores.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(cpModificarTelevisores);
+		cpModificarTelevisores.setLayout(null);
 		{
-			JLabel lblNewLabel = new JLabel("Modelo");
-			lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
-			lblNewLabel.setBounds(20, 41, 64, 19);
-			lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 15));
-			contentPanel.add(lblNewLabel);
+			JLabel lblModelo = new JLabel("Modelo");
+			lblModelo.setHorizontalAlignment(SwingConstants.LEFT);
+			lblModelo.setBounds(20, 41, 64, 19);
+			lblModelo.setFont(new Font("Arial", Font.PLAIN, 15));
+			cpModificarTelevisores.add(lblModelo);
 		}
 		{
-			JLabel lblNewLabel_1 = new JLabel("Precio ( S/ )");
-			lblNewLabel_1.setHorizontalAlignment(SwingConstants.LEFT);
-			lblNewLabel_1.setVerticalAlignment(SwingConstants.TOP);
-			lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 15));
-			lblNewLabel_1.setBounds(20, 80, 80, 19);
-			contentPanel.add(lblNewLabel_1);
+			JLabel lblPrecio = new JLabel("Precio ( S/ )");
+			lblPrecio.setHorizontalAlignment(SwingConstants.LEFT);
+			lblPrecio.setVerticalAlignment(SwingConstants.TOP);
+			lblPrecio.setFont(new Font("Arial", Font.PLAIN, 15));
+			lblPrecio.setBounds(20, 80, 80, 19);
+			cpModificarTelevisores.add(lblPrecio);
 		}
 		{
-			JLabel lblNewLabel_2 = new JLabel("Ancho ( cm )");
-			lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 15));
-			lblNewLabel_2.setBounds(20, 121, 91, 18);
-			contentPanel.add(lblNewLabel_2);
+			JLabel lblAncho = new JLabel("Ancho ( cm )");
+			lblAncho.setFont(new Font("Arial", Font.PLAIN, 15));
+			lblAncho.setBounds(20, 121, 91, 18);
+			cpModificarTelevisores.add(lblAncho);
 		}
 		{
-			JLabel lblNewLabel_3 = new JLabel("Alto ( cm )");
-			lblNewLabel_3.setFont(new Font("Arial", Font.PLAIN, 15));
-			lblNewLabel_3.setBounds(20, 163, 80, 19);
-			contentPanel.add(lblNewLabel_3);
+			JLabel lblAncho = new JLabel("Alto ( cm )");
+			lblAncho.setFont(new Font("Arial", Font.PLAIN, 15));
+			lblAncho.setBounds(20, 163, 80, 19);
+			cpModificarTelevisores.add(lblAncho);
 		}
 		{
-			JLabel lblNewLabel_4 = new JLabel("Fondo ( cm )");
-			lblNewLabel_4.setFont(new Font("Arial", Font.PLAIN, 15));
-			lblNewLabel_4.setBounds(20, 203, 91, 19);
-			contentPanel.add(lblNewLabel_4);
+			JLabel lblFondo = new JLabel("Fondo ( cm )");
+			lblFondo.setFont(new Font("Arial", Font.PLAIN, 15));
+			lblFondo.setBounds(20, 203, 91, 19);
+			cpModificarTelevisores.add(lblFondo);
 		}
 		{
-			JButton btnNewButton = new JButton("Cerrar");
-			btnNewButton.setFont(new Font("Arial", Font.PLAIN, 15));
-			btnNewButton.setBounds(335, 41, 102, 21);
-			contentPanel.add(btnNewButton);
-			btnNewButton.addActionListener(e -> dispose());
+			JButton btnCerrar = new JButton("Cerrar");
+			btnCerrar.setFont(new Font("Arial", Font.PLAIN, 15));
+			btnCerrar.setBounds(335, 41, 102, 21);
+			cpModificarTelevisores.add(btnCerrar);
+			btnCerrar.addActionListener(e -> dispose());
 		}
 		{
-			JButton btnNewButton_1 = new JButton("Guardar");
-			btnNewButton_1.setFont(new Font("Arial", Font.PLAIN, 15));
-			btnNewButton_1.setBounds(335, 80, 102, 21);
-			contentPanel.add(btnNewButton_1);
+			JButton btnGuardar = new JButton("Guardar");
+			btnGuardar.setFont(new Font("Arial", Font.PLAIN, 15));
+			btnGuardar.setBounds(335, 80, 102, 21);
+			cpModificarTelevisores.add(btnGuardar);
 			{
-				JComboBox comboBox = new JComboBox();
-				comboBox.setFont(new Font("Arial", Font.PLAIN, 15));
-				comboBox.setModel(new DefaultComboBoxModel(new String[] {"LG OLED55C1PSA", "Samsung QLED Q60B 55”", "Sony Bravia X80K 50”", "Xiaomi P1 43”", "TCL 4K 65P735"}));
-				comboBox.setBounds(139, 41, 166, 21);
-				contentPanel.add(comboBox);
+				JComboBox cmbModelo = new JComboBox();
+				cmbModelo.setFont(new Font("Arial", Font.PLAIN, 15));
+				cmbModelo.setModel(new DefaultComboBoxModel(new String[] {"LG OLED55C1PSA", "Samsung QLED Q60B 55”", "Sony Bravia X80K 50”", "Xiaomi P1 43”", "TCL 4K 65P735"}));
+				cmbModelo.setBounds(139, 41, 166, 21);
+				cpModificarTelevisores.add(cmbModelo);
 			}
 		
 		}
@@ -110,7 +110,7 @@ public class ModificarTelevisores extends JDialog {
 			txtPrecio.setFont(new Font("Arial", Font.PLAIN, 15));
 			txtPrecio.setText("3499.0");
 			txtPrecio.setBounds(139, 81, 166, 19);
-			contentPanel.add(txtPrecio);
+			cpModificarTelevisores.add(txtPrecio);
 			txtPrecio.setColumns(10);
 		}
 		{
@@ -118,7 +118,7 @@ public class ModificarTelevisores extends JDialog {
 			txtAncho.setFont(new Font("Arial", Font.PLAIN, 15));
 			txtAncho.setText("122.0");
 			txtAncho.setBounds(139, 122, 166, 19);
-			contentPanel.add(txtAncho);
+			cpModificarTelevisores.add(txtAncho);
 			txtAncho.setColumns(10);
 		}
 		{
@@ -126,7 +126,7 @@ public class ModificarTelevisores extends JDialog {
 			txtAlto.setFont(new Font("Arial", Font.PLAIN, 15));
 			txtAlto.setText("70.6");
 			txtAlto.setBounds(139, 164, 166, 19);
-			contentPanel.add(txtAlto);
+			cpModificarTelevisores.add(txtAlto);
 			txtAlto.setColumns(10);
 		}
 		{
@@ -134,7 +134,7 @@ public class ModificarTelevisores extends JDialog {
 			txtFondo.setFont(new Font("Arial", Font.PLAIN, 15));
 			txtFondo.setText("4.7");
 			txtFondo.setBounds(139, 204, 166, 19);
-			contentPanel.add(txtFondo);
+			cpModificarTelevisores.add(txtFondo);
 			txtFondo.setColumns(10);
 		}
 	}
